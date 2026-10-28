@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Mihaila_Cristina_ActivitateDAM2026</string>
+    <string name="introducere_date">Adauga computer (design clasic)</string>
+    <string name="introducere_date_ai">Adauga computer (design AI)</string>
+    <string name="introduceti_marca">Introduceti marca</string>
+    <string name="introduceti_pretul">Introduceti pretul (RON)</string>
+
+    <string-array name="procesoare">
+        <item>Intel Core i3</item>
+        <item>Intel Core i5</item>
+        <item>Intel Core i7</item>
+        <item>AMD Ryzen 5</item>
+        <item>AMD Ryzen 7</item>
+    </string-array>
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marca" />
+
+        <EditText
+            android:id="@+id/marcaET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/introduceti_marca"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Procesor" />
+
+        <Spinner
+            android:id="@+id/procesorSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pret" />
+
+        <EditText
+            android:id="@+id/pretET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/introduceti_pretul"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tip" />
+
+        <RadioGroup
+            android:id="@+id/tipRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioLaptop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laptop" />
+
+            <RadioButton
+                android:id="@+id/radioDesktop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desktop" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/garantieCB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are garantie" />
+
+        <Switch
+            android:id="@+id/ssdSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are SSD" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rating" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <Button
+            android:id="@+id/buttonAdauga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="adaugaComputer"
+            android:text="Adauga computer" />
+    </LinearLayout>
+</ScrollView>

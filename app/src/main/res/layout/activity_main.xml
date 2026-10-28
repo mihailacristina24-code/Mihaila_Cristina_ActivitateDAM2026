@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/buttonDeschideActivitate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="deschidereActivitate"
+        android:text="@string/introducere_date" />
+
+    <Button
+        android:id="@+id/buttonDeschideActivitateAI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="deschidereActivitateAI"
+        android:text="@string/introducere_date_ai" />
+
+    <TextView
+        android:id="@+id/rezultatTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:text="Niciun computer adaugat inca." />
+</LinearLayout>
