@@ -29,6 +29,9 @@
             android:name=".IntroducereDateAI"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ListaComputere"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -20,6 +20,13 @@
         android:onClick="deschidereActivitateAI"
         android:text="@string/introducere_date_ai" />
 
+    <Button
+        android:id="@+id/buttonLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="deschideLista"
+        android:text="Afiseaza lista computere" />
+
     <TextView
         android:id="@+id/rezultatTV"
         android:layout_width="match_parent"

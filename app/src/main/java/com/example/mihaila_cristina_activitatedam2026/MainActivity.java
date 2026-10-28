@@ -1,5 +1,7 @@
 package com.example.mihaila_cristina_activitatedam2026;
 
+import java.util.ArrayList;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String CHEIE_COMPUTER = "computer";
 
+    public static final String CHEIE_LISTA = "lista_computere";
+
+    private final ArrayList<Computer> listaComputere = new ArrayList<>();
     private TextView rezultatTV;
 
     private final ActivityResultLauncher<Intent> launcherAdaugare =
@@ -27,8 +32,24 @@ public class MainActivity extends AppCompatActivity {
                     if (bundle != null) {
                         Computer computer = bundle.getParcelable(CHEIE_COMPUTER);
                         if (computer != null) {
+                            listaComputere.add(computer);
                             rezultatTV.setText(computer.toString());
                             Toast.makeText(this, computer.toString(), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }
+            });
+
+    private final ActivityResultLauncher<Intent> launcherLista =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK && result.getData() != null) {
+                    ArrayList<Computer> actualizata =
+                            result.getData().getParcelableArrayListExtra(CHEIE_LISTA);
+                    if (actualizata != null) {
+                        listaComputere.clear();
+                        listaComputere.addAll(actualizata);
+                        if (listaComputere.isEmpty()) {
+                            rezultatTV.setText("Niciun computer adaugat inca.");
                         }
                     }
                 }
@@ -55,5 +76,11 @@ public class MainActivity extends AppCompatActivity {
     // Activitatea de introducere date - varianta cu design realizat cu AI
     public void deschidereActivitateAI(View view) {
         launcherAdaugare.launch(new Intent(this, IntroducereDateAI.class));
+    }
+
+    public void deschideLista(View view) {
+        Intent it = new Intent(this, ListaComputere.class);
+        it.putParcelableArrayListExtra(CHEIE_LISTA, listaComputere);
+        launcherLista.launch(it);
     }
 }
