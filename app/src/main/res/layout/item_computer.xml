@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="#F1F3F5">
+
+    <TextView
+        android:id="@+id/marcaTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#202124" />
+
+    <TextView
+        android:id="@+id/procesorTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Procesor"
+        android:textSize="15sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/pretTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pret"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tipTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/garantieTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Garantie"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/ssdTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SSD"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/ratingTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>
