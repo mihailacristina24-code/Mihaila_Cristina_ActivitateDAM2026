@@ -39,7 +39,6 @@ public class IntroducereDate extends AppCompatActivity {
         setContentView(R.layout.activity_introducere_date);
         buttonAdauga = findViewById(R.id.buttonAdauga);
 
-        // Identificam componentele vizuale
         marcaET = findViewById(R.id.marcaET);
         pretET = findViewById(R.id.pretET);
         tipRG = findViewById(R.id.tipRG);
@@ -48,7 +47,6 @@ public class IntroducereDate extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         ssdSwitch = findViewById(R.id.ssdSwitch);
 
-        // Configuram Spinner-ul
         ArrayAdapter<CharSequence> adapter =
                 ArrayAdapter.createFromResource(
                         this,
@@ -62,25 +60,19 @@ public class IntroducereDate extends AppCompatActivity {
 
         procesorSpinner.setAdapter(adapter);
 
-        // Verificam daca am primit un computer pentru modificare
-        computerSelectat =
-                getIntent().getParcelableExtra("computer_selectat");
+        //aici gen verificam daca am primit computer pt modificare
+        computerSelectat = getIntent().getParcelableExtra("computer_selectat");
 
         if (computerSelectat != null) {
 
-            // Completam marca
             marcaET.setText(computerSelectat.getMarca());
 
-            // Completam pretul
             pretET.setText(String.valueOf(computerSelectat.getPret()));
 
-            // Selectam tipul computerului
             for (int i = 0; i < tipRG.getChildCount(); i++) {
-                RadioButton radioButton =
-                        (RadioButton) tipRG.getChildAt(i);
+                RadioButton radioButton = (RadioButton) tipRG.getChildAt(i);
 
-                if (radioButton.getText().toString()
-                        .equals(computerSelectat.getTip())) {
+                if (radioButton.getText().toString().equals(computerSelectat.getTip())) {
 
                     radioButton.setChecked(true);
                     break;
@@ -93,33 +85,24 @@ public class IntroducereDate extends AppCompatActivity {
                 buttonAdauga.setText("Adaugă computer");
             }
 
-            // Completam garantia
             garantieCB.setChecked(computerSelectat.isAreGarantie());
 
-            // Selectam procesorul
             for (int i = 0; i < procesorSpinner.getCount(); i++) {
 
-                if (procesorSpinner.getItemAtPosition(i).toString()
-                        .equals(computerSelectat.getProcesor())) {
+                if (procesorSpinner.getItemAtPosition(i).toString().equals(computerSelectat.getProcesor())) {
 
                     procesorSpinner.setSelection(i);
                     break;
                 }
             }
 
-            // Completam rating-ul
             ratingBar.setRating(computerSelectat.getRating());
 
-            // Completam informatia despre SSD
             ssdSwitch.setChecked(computerSelectat.isAreSsd());
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(
-                findViewById(R.id.main),
-                (v, insets) -> {
-                    Insets systemBars = insets.getInsets(
-                            WindowInsetsCompat.Type.systemBars()
-                    );
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+                    Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 
                     v.setPadding(
                             systemBars.left,

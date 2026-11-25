@@ -17,53 +17,40 @@ public class ComputerAdapter extends BaseAdapter {
     private int layout;
 
     // Constructor
-    public ComputerAdapter(Context context,
-                           int layout,
-                           ArrayList<Computer> lista) {
+    public ComputerAdapter(Context context, int layout, ArrayList<Computer> lista) {
         this.context = context;
         this.layout = layout;
         this.lista = lista;
     }
 
-    // Returneaza numarul de elemente din lista
     @Override
     public int getCount() {
-        return lista.size();
+        return this.lista.size();
     }
 
-    // Returneaza obiectul de pe pozitia solicitata
     @Override
     public Computer getItem(int position) {
-        return lista.get(position);
+        return this.lista.get(position);
     }
 
-    // Returneaza identificatorul elementului
     @Override
     public long getItemId(int position) {
         return position;
     }
 
-    // Construieste vizual fiecare rand din ListView
     @Override
-    public View getView(int position,
-                        View convertView,
-                        ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
 
         View view = convertView;
-
-        // Daca nu avem deja un rand creat,
-        // incarcam layout-ul XML
+        //daca nu avem randul, aici incarcam cum ar veni layout-ul din xml
         if (view == null) {
-            LayoutInflater inflater =
-                    LayoutInflater.from(context);
+            LayoutInflater inflater = LayoutInflater.from(context);
 
             view = inflater.inflate(layout, parent, false);
         }
 
-        // Luam obiectul corespunzator pozitiei
         Computer computer = getItem(position);
 
-        // Identificam elementele vizuale
         TextView marcaTV = view.findViewById(R.id.marcaTV);
         TextView procesorTV = view.findViewById(R.id.procesorTV);
         TextView pretTV = view.findViewById(R.id.pretTV);
@@ -72,7 +59,6 @@ public class ComputerAdapter extends BaseAdapter {
         TextView ssdTV = view.findViewById(R.id.ssdTV);
         TextView ratingTV = view.findViewById(R.id.ratingTV);
 
-        // Completam elementele vizuale cu datele obiectului
         marcaTV.setText(computer.getMarca());
 
         procesorTV.setText("Procesor: " + computer.getProcesor());
@@ -81,14 +67,11 @@ public class ComputerAdapter extends BaseAdapter {
 
         tipTV.setText("Tip: " + computer.getTip());
 
-        garantieTV.setText("Garantie: " +
-                (computer.isAreGarantie() ? "Da" : "Nu"));
+        garantieTV.setText("Garantie: " + (computer.isAreGarantie() ? "Da" : "Nu"));
 
-        ssdTV.setText("SSD: " +
-                (computer.isAreSsd() ? "Da" : "Nu"));
+        ssdTV.setText("SSD: " + (computer.isAreSsd() ? "Da" : "Nu"));
 
-        ratingTV.setText("Rating: " +
-                computer.getRating() + " / 5");
+        ratingTV.setText("Rating: " + computer.getRating() + " / 5");
 
         return view;
     }

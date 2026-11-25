@@ -19,8 +19,7 @@ public class Computer implements Parcelable {
     public Computer() {
     }
 
-    public Computer(String marca, String procesor, double pret, String tip,
-                    boolean areGarantie, float rating, boolean areSsd) {
+    public Computer(String marca, String procesor, double pret, String tip, boolean areGarantie, float rating, boolean areSsd) {
         this.marca = marca;
         this.procesor = procesor;
         this.pret = pret;
@@ -30,6 +29,7 @@ public class Computer implements Parcelable {
         this.areSsd = areSsd;
     }
 
+    //reconstruim un obiect computer folosind datele citite dintr-un parcel(colet)
     protected Computer(Parcel in) {
         marca = in.readString();
         procesor = in.readString();

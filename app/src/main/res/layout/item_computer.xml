@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp"
-    android:layout_marginBottom="8dp"
-    android:background="#F1F3F5">
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/marcaTV"
@@ -13,16 +12,14 @@
         android:layout_height="wrap_content"
         android:text="Marca"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#202124" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/procesorTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Procesor"
-        android:textSize="15sp"
-        android:layout_marginTop="4dp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/pretTV"
@@ -30,8 +27,7 @@
         android:layout_height="wrap_content"
         android:text="Pret"
         android:textSize="17sp"
-        android:textStyle="bold"
-        android:layout_marginTop="8dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tipTV"

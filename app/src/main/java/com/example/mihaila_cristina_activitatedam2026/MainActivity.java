@@ -83,4 +83,9 @@ public class MainActivity extends AppCompatActivity {
         it.putParcelableArrayListExtra(CHEIE_LISTA, listaComputere);
         launcherLista.launch(it);
     }
+
+    //deschide activitate cu lista de imagini
+    public void deschideImagini(View view){
+        startActivity(new Intent(this, ImaginiActivity.class));
+    }
 }

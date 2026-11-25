@@ -4,6 +4,10 @@
     <string name="introducere_date_ai">Adauga computer (design AI)</string>
     <string name="introduceti_marca">Introduceti marca</string>
     <string name="introduceti_pretul">Introduceti pretul (RON)</string>
+    <string name="imagini_din_domeniul_calculatoarelor">Imagini din domeniul calculatoarelor</string>
+    <string name="afiseaza_lista_computere">Afiseaza lista computere</string>
+    <string name="niciun_computer_adaugat_inca">Niciun computer adaugat inca.</string>
+    <string name="imagini_calculatoare">Imagini calculatoare</string>
 
     <string-array name="procesoare">
         <item>Intel Core i3</item>

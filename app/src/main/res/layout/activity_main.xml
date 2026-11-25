@@ -25,7 +25,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="deschideLista"
-        android:text="Afiseaza lista computere" />
+        android:text="@string/afiseaza_lista_computere" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonImagini"
+        android:onClick="deschideImagini"
+        android:text="@string/imagini_calculatoare"/>
 
     <TextView
         android:id="@+id/rezultatTV"
@@ -33,5 +40,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:textSize="18sp"
-        android:text="Niciun computer adaugat inca." />
+        android:text="@string/niciun_computer_adaugat_inca" />
 </LinearLayout>
